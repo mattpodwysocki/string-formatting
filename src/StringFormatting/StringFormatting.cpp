@@ -72,12 +72,12 @@ int asprintf(char **ret, const char *format, ...)
 int main()
 {
 	char* str = NULL;
-	asprintf(&str, "Hello ANSI %s %s\n", "foo", "bar");
+	asprintf(&str, "Hello ANSI %s %s %d\n", "foo", "bar", 123);
 	printf(str);
 	free(str);
 
 	wchar_t* wstr = NULL;
-	aswprintf(&wstr, L"Hello Unicode %s %s\n", L"foo", L"bar");
+	aswprintf(&wstr, L"Hello Unicode %s %s %d\n", L"foo", L"bar", 123);
 	wprintf(wstr);
 	free(wstr);
     return 0;
